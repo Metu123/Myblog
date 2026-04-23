@@ -48,7 +48,7 @@ app.post("/submit-text", (req, res) => {
     const query = "INSERT INTO texts (content) VALUES (?)";
     db.query(query, [text], (err, result) => {
         if (err) {
-            console.error("Error saving text:", err);
+            console.error("Errors saving text:", err);
             return res.json({ success: false, message: "Has failed to save text" });
         }
         res.json({ success: true, message: "Text saved successfully!" });
