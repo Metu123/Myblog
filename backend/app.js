@@ -59,7 +59,7 @@ app.post("/submit-text", (req, res) => {
 app.get("/texts", (req, res) => {
     db.query("SELECT * FROM texts ORDER BY id DESC", (err, results) => {
         if (err) {
-            console.error("Error fetching texts:", err);
+            console.error("Errors fetching texts:", err);
             return res.json([]);
         }
         res.json(results);
