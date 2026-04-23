@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS texts (
 )
 `;
 db.query(createTableQuery, (err) => {
-    if (err) console.error("Error creating table:", err);
+    if (err) console.error("Errors creating table:", err);
 });
 
 // Endpoint to submit text
