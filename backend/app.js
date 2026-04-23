@@ -49,7 +49,7 @@ app.post("/submit-text", (req, res) => {
     db.query(query, [text], (err, result) => {
         if (err) {
             console.error("Error saving text:", err);
-            return res.json({ success: false, message: "Failed to save text" });
+            return res.json({ success: false, message: "Has failed to save text" });
         }
         res.json({ success: true, message: "Text saved successfully!" });
     });
